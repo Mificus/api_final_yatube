@@ -1,11 +1,11 @@
+from api.serializers import CommentSerializer, FollowSerializer
+from api.serializers import GroupsSerializer, PostSerializer
 from django.shortcuts import get_object_or_404
 from posts.models import Comment, Follow, Group, Post
 from rest_framework import filters, permissions, viewsets
 from rest_framework.pagination import LimitOffsetPagination
 
 from .permissions import OwnerOrReadOnly
-from api.serializers import CommentSerializer, FollowSerializer
-from api.serializers import GroupsSerializer, PostSerializer
 
 
 class PostViewSet(viewsets.ModelViewSet):
