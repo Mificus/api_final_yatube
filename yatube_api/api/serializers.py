@@ -47,10 +47,6 @@ class FollowSerializer(serializers.ModelSerializer):
     class Meta:
         model = Follow
         fields = '__all__'
-        # оставил валидатор. в модели убрал.
-        # оставил только связанные уникальные поля
-        # иначе если тут убрать валидатор,
-        # то крашится тест на создание подписки
         validators = (
             UniqueTogetherValidator(
                 queryset=Follow.objects.all(),
