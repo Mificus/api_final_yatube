@@ -19,7 +19,7 @@ class GroupsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Group
         fields = ('id', 'title', 'slug', 'description')
-        read_only_fields = ('title',)
+        # read_only_fields = ('title',)
 
 
 class CommentSerializer(serializers.ModelSerializer):
